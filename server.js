@@ -39,7 +39,8 @@ app.get('/reserve', function(req, res) {
 app.get('/api/tables', function(req, res) {
     connection.query("SELECT * FROM reservations", function(err, data) {
         if (err) throw err;
-        res.end(JSON.stringify(data));
+        res.end(JSON.stringify(data))
+;
     });
 });
 
